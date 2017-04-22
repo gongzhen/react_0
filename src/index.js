@@ -15,18 +15,21 @@ Header.propTyles = {
 
 const App = () => {
   var names = ['Chris', 'Emily', 'Kate'];
+  var arr = [
+    <h1>Hello world!</h1>,
+    <h2>React is awesome</h2>
+  ];
   return (
       <div>
         <Header message="App" />
         <div>
-          <h1>Hello, world!</h1>
-          {
-            names.map(function (name, i){
-              return <div key={i}>Hello, {name}!</div>
-            })
-          }
+        {
+          arr.map((name,index) => {
+            return <div>{index}:{name}</div>
+          })
+        }
         </div>
-      </div>
+     </div>
       );
 }
 
