@@ -25,7 +25,7 @@ const App = () => {
         <div>
         {
           arr.map((name,index) => {
-            return <div>{index}:{name}</div>
+            return <div key={index}>{index}:{name}</div>
           })
         }
         </div>
