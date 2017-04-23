@@ -13,28 +13,21 @@ Header.propTyles = {
   message:React.PropTypes.string
 }
 
-const App = () => {
-  var names = ['Chris', 'Emily', 'Kate'];
-  var arr = [
-    <h1>Hello world!</h1>,
-    <h2>React is awesome</h2>
-  ];
+const App = (helloMessage) => {
   return (
       <div>
         <Header message="App" />
         <div>
         {
-          arr.map((name,index) => {
-            return <div key={index}>{index}:{name}</div>
-          })
-        }
+          <h1>{helloMessage}</h1>
+        });
         </div>
      </div>
-      );
+  );
 }
 
 ReactDOM.render(
-  <App />,
+  <App helloMessage = "Hello Message"/>,
     document.getElementById('root')
 );
 
